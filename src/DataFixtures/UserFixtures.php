@@ -48,7 +48,7 @@ $user->setNom($this->faker->lastName())
 
 ->setEmail(strtolower($user->getPrenom()).'.'.strtolower($user->getNom()).'@'.$this->faker->freeEmailDomain())
 
-->setPassword($this->passwordHasher->hashPassword($user, strtolower($user->getPrenom())))
+->setPassword(strtolower($user->getPrenom()))
 
 ->setDateInscription($this->faker->dateTimeThisYear());
 
